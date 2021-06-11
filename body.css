@@ -1,0 +1,544 @@
+
+*
+{
+   margin: 0;
+   padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.ban
+{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 100 px;
+    display: flex;
+    background: linear-gradient(#404040, #151415);
+    
+}
+
+.ban:before
+{
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 400px;
+    width: 500px;
+    height: 420px;
+    background:#f5b7ee ;
+    z-index: 1;
+    transition: 1s;
+    border-radius: 50px;
+
+}
+.ban.active:before
+{
+    top: 0; 
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: #151415;
+    border-radius: 0%;
+
+}
+.ban:after
+{ 
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    right: 200px;
+    width: 500px;
+    height: 300px;
+    background:#ca2929 ;
+    z-index: 1;
+    transition: 1s;
+    border-radius: 50px;
+
+}
+.ban.active:after
+{
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: #151415;
+    border-radius: 0%;
+
+}
+
+header
+{
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ z-index: 1000;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding:30px 100px ;   
+}
+
+header .logo
+{
+    font-size: 2em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700 px;
+    transition: 0.5s;
+    transform-origin: right;
+}
+
+.ban.active .logo 
+{
+    transform: scale(0);
+    transform-origin: left;
+}
+.waktu.active .logo{
+    transform: scale(0);
+    transform-origin: left;
+}
+.toggle
+{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: url(menu.png);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+    cursor: pointer;
+}
+
+.toggle.active
+{
+    background: url(close.png);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: center;
+}
+
+.content
+{
+    position:relative;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+    transform-origin: right;
+}
+.ban.active .content
+{
+    transform: scale(0);
+    transform-origin: left;
+}
+
+.content .isi
+{
+    max-width: 600px;
+    margin-left: 60px;
+}
+
+.content .isi h2
+{
+  font-size: 4em;
+  line-height: 1em;
+  color: white;
+  text-transform: uppercase;  
+}
+.content .isi p
+{
+    font-size: 1em;
+    color: rgb(233, 212, 229);
+    margin: 20px 0;
+}
+
+.content .isi a
+{
+    display: inline-block;
+    border: 1px solid white;
+    color:white;
+    padding: 10 px 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.5s;
+    padding: 6px;
+
+}
+
+.content .isi a:hover
+{
+    letter-spacing: 4px;
+    background: white;
+    color:#111;
+}
+.content .imgbx img
+
+{
+    width: 500px;
+    margin-right: 200px;
+}
+
+.menu
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    transition-delay: 0s;
+}
+.ban.active .menu
+{
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 1s;
+}
+
+.waktu.active .menu
+{
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+.body.active .menu
+{
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+.bodydark.active .menu
+{
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+
+.elementt.active .menu
+{
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+
+
+.menu li
+{
+    list-style: none;
+}
+.menu li a
+{
+    color:white;
+    text-decoration: none;
+    font-size: 2em;
+
+}
+
+.menu li a:hover
+{
+    color:rgb(15, 14, 14);
+    text-decoration: none;
+    font-size: 2em;
+    background-color: white;
+    padding: 6px;
+
+}
+
+.waktu
+{
+    background-color: rgb(240, 210, 231);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:px solid white;
+}
+.waktu.active
+{
+    background-color: rgb(17, 12, 14);
+}
+
+.set div span
+{
+    border-radius: 50px;
+   border:4px solid;
+}
+.waktu.active .set
+{
+    transform: scale(0);
+    transform-origin: left;
+}
+#clock h2
+{
+    position:relative;
+    display: block;
+    color: black;
+    text-align: center;
+    margin: 10px 0px;
+    font-weight: 700px;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    font-size: 0.8em;
+}
+#clock #time
+{
+    display: flex;
+}
+#clock #time div
+{
+    position: relative;
+    margin:0.5px ;
+  
+
+}
+#clock #time div span
+{
+   position: relative;
+   display: block;
+    width: 100px;
+    height: 80px;
+    background: #e593c6;
+    color: white;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    z-index: 10;
+    box-shadow: 0 0 0 1px rgba(0 ,0,0,0.2);
+}
+#clock #time div span:nth-child(2)
+{
+   height: 30px;
+   font-size:0.7em ;
+   font-weight: 500;
+   z-index: 9;
+   box-shadow: none;
+   background: #e593c6;
+   text-transform: uppercase;
+}
+
+.img-fluid
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 250px;
+    width: 350px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.img
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 50px;
+    margin-left: 10em;
+    margin-right: 10em;
+    background-color: rgb(230, 236, 238);
+    padding: 30px;
+}
+
+.body
+{
+    background-color: rgb(180, 218, 223);
+}
+.body.active a
+{
+    transform: scale(0);
+    transform-origin: left;
+}
+.body.active  h1
+{
+    transform: scale(0);
+    transform-origin: right;
+}
+.body.active
+{
+    background-color: rgb(17, 12, 14);
+}
+.body.active .svg
+{
+    transform: scale(0);
+    transform-origin: left;
+}
+.body.active .img
+{
+    transform: scale(0);
+    transform-origin: left;
+}
+.body h1
+{
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.svg
+{
+    width:60px;
+    height: 60px;
+    border-radius: 40px;
+    padding: 6px;
+    background-color:rgb(230, 236, 238) ;
+    margin-left: 50%;
+    margin-right: 50%;
+    margin-bottom: 10px;
+   
+    
+}
+.svg:hover 
+{
+    color: white;
+    width:60px;
+    height: 60px;
+    border-radius: 40px;
+    padding: 6px;
+    background-color:rgb(35, 58, 66) ;
+    margin-left: 50%;
+    margin-right: 50%;
+    margin-bottom: 10px;
+}
+.imgdark
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 50px;
+    margin-left: 10em;
+    margin-right: 10em;
+    background-color: rgb(42, 55, 59);
+    padding: 30px;
+}
+
+.bodydark
+{
+    background-color: rgb(3, 6, 7);
+}
+.bodydark h1
+{
+    font-family: 'Nunito Sans', sans-serif;
+}
+.bodydark.active a
+{
+    transform: scale(0);
+    transform-origin: left;
+}
+.bodydark.active  h1
+{
+    transform: scale(0);
+    transform-origin: right;
+}
+.bodydark.active
+{
+    background-color: rgb(17, 12, 14);
+}
+.bodydark.active .dark
+{
+    transform: scale(0);
+    transform-origin: left;
+}
+.bodydark.active .imgdark
+{
+    transform: scale(0);
+    transform-origin: left;
+}
+.dark
+{
+    width:60px;
+    height: 60px;
+    border-radius: 40px;
+    padding: 6px;
+    background-color:rgb(35, 58, 66);
+    margin-left: 50%;
+    margin-right: 50%;
+    margin-bottom: 10px;
+}
+.dark:hover 
+{
+    color: white;
+    width:60px;
+    height: 60px;
+    border-radius: 40px;
+    padding: 6px;
+    background-color:rgb(230, 236, 238) ;
+    margin-left: 50%;
+    margin-right: 50%;
+    margin-bottom: 10px;
+}
+.register{
+	
+	margin-left:50px;
+	margin-right:20px;
+	font-size:25px;
+
+}
+.da{
+	border:3px solid;
+	border-color: #7c745c ;
+	background-color:  #ffd4d8  ;
+	margin-left:700px;
+	margin-top:300px;
+    margin-right: 500px;
+	border-radius:9px;
+	width:20%;
+	padding:30px;
+}
+
+.elementt
+{
+    background-image: url(bg2.jpg);
+    background-color: azure;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.elementt.active
+{
+    background-image: url(bg5.jpg);
+}
+.input{
+	width:100%;
+	box-sizing:border-box;
+	padding:7px 6px;
+	border-radius:6px;
+	border:none;
+	margin:3px;
+}
+.elementt.active .element1
+{
+    transform: scale(0);
+    transform-origin: left;
+}
+
+#input 
+{
+    border:none;
+    border-radius:2px;
+    padding:7px 6px;
+    margin:3px;
+    background-color: rgb(228, 140, 181);
+    color:white;
+}
+#result
+{
+    border:none;
+    border-radius:2px;
+    padding:7px 6px;
+    margin:3px;
+    background-color: rgb(228, 140, 181);
+    color:white;
+}
